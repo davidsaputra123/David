@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirim Pesan Anonim</title>
+    <style>
+        /* CSS Sederhana untuk Tampilan */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            resize: vertical;
+            min-height: 150px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .anonim-info {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kirim Pesan Rahasia</h1>
+        
+        <form id="anonymousForm" action="/submit-message" method="POST">
+            <div class="form-group">
+                <label for="message">Tuliskan pesan anonim Anda:</label>
+                <textarea id="message" name="message" required placeholder="Tuliskan pesan Anda di sini..."></textarea>
+            </div>
+            
+            <button type="submit">Kirim Pesan</button>
+            
+            <div class="anonim-info">
+                Pesan akan dikirim secara **anonim** kepada penerima.
+            </div>
+            
+            <input type="hidden" name="sender_id" value="[DIISI OLEH SISTEM BACKEND]">
+        </form>
+
+        <p class="anonim-info" style="margin-top: 30px; color: red;">
+            *Halaman ini hanya antarmuka. Anda memerlukan **server backend** (PHP, Node.js, Python, dll.) dan **sistem login/autentikasi** untuk benar-benar mengidentifikasi pengirim pesan secara rahasia.
+        </p>
+    </div>
+</body>
+</html>
